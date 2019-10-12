@@ -1,0 +1,87 @@
+#navigationBar{
+	background-color: #FFFFFF; 
+	
+	width : 75px;
+	height : 100%;
+	padding:0px;
+	top : 0px;
+	left : 0px;
+
+	font-family: 'Raleway';
+}
+
+#logoContainer{
+
+	margin:7px;
+	width: 100%;
+	height:60px;
+}
+
+#logo{
+
+	height:100%;
+	width: 60px;
+
+	float:left;
+}
+
+#logoText{
+
+	display:none;
+
+	
+}
+
+/* PARAMETRES */
+#parametresWrapper{
+	margin-top:85px;
+}
+.designLine{
+	background-color: lightgray;
+	display:inline-block;
+	width: 5px;
+	height:1px;
+	vertical-align: middle;
+
+}
+
+/*BOUTONS NAVIGATOIN*/
+.navigationButton{
+
+	line-height: 20px;
+
+
+	font-size: 10px;
+	padding-bottom:20px;
+	padding-top:20px;
+
+	letter-spacing: 3px;
+	cursor: pointer;
+
+}
+
+#outputTypes{
+	display:none;
+}
+
+#icon{
+
+	color:gray;
+	font-size: 25px;
+}
+
+.navigationButton:hover{
+	font-size: 11px;
+}
+
+
+.navigationButton:hover > #icon{
+	color:red;
+	font-size:26px;
+	left:24px;
+}
+
+#mainPanel{
+	left:75px;
+	width:calc(100% - 75px - 60px);
+}

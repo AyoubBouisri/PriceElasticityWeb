@@ -1,0 +1,84 @@
+
+body{
+	background-color: #D7D7D7;
+		font-family: 'Raleway';
+
+	margin:0px;
+}
+
+
+
+#navigationBar{
+	position:fixed;
+	margin-right:20px;
+	float:left;
+	background-color: #FFFFFF; 
+	font-family: 'Raleway';
+
+}
+
+/* LOGO ET TITRE DE LA PAGE */
+#logoContainer{
+	width: 100%;
+	height:80px;
+}
+
+
+/* BOUTON PARAMETRES QUI PERMET DE COMPRESSER ET EXPAND LA BARRE DE NAVIGATION */
+
+#parametresWrapper{
+	text-align:center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width:100%;
+	height:30px;
+	margin-top:75px;
+	margin-bottom: 50px;
+}
+
+#parametresButton{
+	display:inline-block;
+	
+	color: #737875;
+	
+	width:50px;
+	height:30px;
+	font-size:35px;
+
+	cursor: pointer;
+}
+
+#parametresButton:hover{
+	width:70px;
+	color:red;
+	font-size:37px
+}
+
+/* BOUTONS DE NAVIGATION */
+
+#buttonsWrapper{
+
+	display: relative;
+	justify-content: center;
+	text-align: center;
+
+	width:100%;
+	height:300px;
+
+}
+
+
+/* MAIN PANEL AVEC LES INPUT ET OUTPUT*/
+
+#mainPanel{
+	position:relative;
+	left:250px;
+	height:100%;
+
+	margin-left:30px;
+}
+
+
+

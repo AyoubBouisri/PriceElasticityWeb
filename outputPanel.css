@@ -1,0 +1,143 @@
+#outputPanel{
+
+	margin-top: 20px;
+	width:100%;
+	height:550px;
+}
+
+/* STYLE FOR THE GRAPH PAGE*/
+
+#graphWrapper{
+
+	position: flex;
+	justify-content: center;
+	text-align: center;
+	width:100%;
+	height:100%;
+
+
+}
+
+#graphWrapper header{
+	background-color: white;
+	width:60%;
+	margin-left:calc(20%);
+
+	font-size : 17px;
+	letter-spacing: 3px;
+	padding-top:10px;
+	padding-bottom: 10px;
+
+	border-radius: 15px 15px 0px 0px;
+
+}
+
+#graphWrapper #graph{
+	background-color: white;
+	height:100%;
+	width:100%;
+}
+
+/* CONSUMER SEGMENTATION SECTION*/
+
+#costumerWrapper{
+	display: block;
+	justify-content: center;
+	text-align: center;
+	width:100%;
+	height:100%;
+
+
+
+
+}
+
+#costumerBody{
+	background-color: white;
+	height:80%;
+
+	margin-bottom: 6px;
+}
+
+.btnWrapper{
+	position: relative;
+	height:18%;
+	
+}
+
+.typeBtn{
+	position: inline-block;
+	float:left;
+	background-color: white;
+	width:160px;
+	height:100%;
+
+	border-radius: 3px;
+	margin-right: 15px;
+	margin-top: 20px;
+
+	cursor:pointer;
+
+		color:#444444;
+
+
+}
+
+.typeBtn:hover{
+	margin-top:10px;
+	border-style: solid;
+	border-width: 0px 0px 5px 0px;
+	border-color: red;
+}
+.btnTitle{
+	text-align: left;
+	letter-spacing: 2px;
+	margin-top:2px;
+	margin-left:5px;
+	font-weight: bold;
+	height:45px;
+}
+
+
+
+#compareTitle,#baselineTitle,#scenarioTitle{
+	font-size:24px;
+	line-height: 45px;
+	margin-left:13px;
+}
+
+.btnLine{
+	background-color:lightgray;
+	width:90%;
+	height:1px;
+	margin-left: calc(10% / 2);
+}
+
+.btnDescription{
+	margin-left:3px;
+	margin-top: 5px;
+	text-align: left;
+	font-size:8px;
+	line-height: 10px;
+}
+
+/* VOLUME THINGS */
+
+#volumeWrapper{
+	display: block;
+	justify-content: center;
+	text-align: center;
+	width:100%;
+	height:100%;
+
+
+
+
+}
+
+#volumeBody{
+	background-color: white;
+	height:80%;
+
+	margin-bottom: 6px;
+}

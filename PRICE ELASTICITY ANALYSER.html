@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Price Elasticity Analyser</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="outputPanel.css">
+    <link rel="stylesheet" type="text/css" href="inputPanel.css">
+
+    <link id = "navBarStyle" rel="stylesheet" type="text/css" href="navBarStyleExpanded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="jquery.js"></script>
+    <script src="https://kit.fontawesome.com/e8be218b59.js" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+  	<div id = "navigationBar">
+  		<div id = "logoContainer">
+  			<img id = "logo" src ="logo.png" alt = "logo" height = "100" width = "100"></img>
+
+  			<div id = "logoText">
+  				<span>PRICE ELASTICTY ANALYSER</span>
+  			</div>
+  		</div>
+
+  		<div id = "parametresWrapper">
+  			<div class = "designLine"></div>
+  			<div id = "parametresButton" class = "fas fa-angle-double-right"> </div>
+  			<div class = "designLine"></div>
+  		</div>
+
+  		<div id = "buttonsWrapper">
+  			
+  			<div id = "homeBtn" class = "navigationButton">
+  				<i class = "fa fa-home" id = "icon"></i>
+  				HOME
+  			</div>
+  			<div id = "inputBtn" class = "navigationButton">
+  				<i class ="far fa-keyboard" id = "icon"></i>
+  				INPUTS
+  			</div>
+  			<div id = "outputBtn" class = "navigationButton"  >
+  				<i class = "fas fa-chart-pie" id = "icon"></i>
+  				OUTPUTS
+  			</div>
+
+  			<div id = "outputTypes">
+  				<div id = "graphBtn" class = "outputType">PRICE ELASTICTY GRAPH</div>
+  				<div class = "line"></div>
+  				<div id = "costumerBtn" class = "outputType">CONSUMER SEGMENTATION</div>
+  				<div class = "line"></div>
+  				<div id = "volumeBtn" class = "outputType">VOLUME ARPU REVENUE ACLV</div>
+
+
+  			</div>
+  		</div>
+
+  	</div>
+
+  	<div id = "mainPanel">
+  		<div id = "inputPanel">
+  			<header>
+  				<div id = "inputTitle">INPUTS</div>
+  				<div id = "inputCloseButton" class = "fas fa-times"></div>
+  			</header>
+
+		</div>
+
+		<div id = "outputPanel">
+			<div id = "graphWrapper" style="display: none">
+				<header> PRICE ELASTICITY GRAPH</header>
+				<div id = "graph"></div>
+			</div>
+
+			<div id = "costumerWrapper" style="display: none" >
+				<div id = "costumerBody"></div>
+				<div class = "btnWrapper">
+					<div id = "recontract" class = "typeBtn">
+						<div class = "btnTitle">RECONTRACTED COSTUMERS</div>
+						<div class = "btnLine"></div>
+						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for returning costumers</div>
+					</div>
+
+					<div id = "new" class = "typeBtn" >
+						<div class = "btnTitle">NEW COSTUMERS</div>
+						<div class = "btnLine"></div>
+						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for new costumers</div>
+					</div>
+
+					<div class = "typeBtn" id ="compare">
+						<div id = "compareTitle" class = "btnTitle">COMPARE</div>
+						<div class = "btnLine"></div>
+						<div class = "btnDescription"> Compare the data of the new and recontracted consumers</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id = "volumeWrapper" style = "display: none">
+				<div id = "volumeBody"></div>
+				<div class = "btnWrapper">
+					<div id = "baseline" class = "typeBtn">
+						<div id = "baselineTitle" class = "btnTitle">BASELINE</div>
+						<div class = "btnLine"></div>
+						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for returning costumers</div>
+					</div>
+
+					<div id = "scenario" class = "typeBtn">
+						<div id = "scenarioTitle" class = "btnTitle">SCENARIO</div>
+						<div class = "btnLine"></div>
+						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for new costumers</div>
+					</div>
+
+					<div class = "typeBtn" id ="compare">
+						<div id = "compareTitle" class = "btnTitle">COMPARE</div>
+						<div class = "btnLine"></div>
+						<div class = "btnDescription"> Compare the data of the new and recontracted consumers</div>
+					</div>
+			</div>
+
+
+		</div>
+  	</div>
+
+  </body>
+</html>
