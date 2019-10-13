@@ -45,6 +45,7 @@ function setOutputLinks(){
 	volumeBtn.click(function(){
 		showDiv(volumeWrapper,graphDiv,customersDiv);
 
+
 	});
 }
 
@@ -66,6 +67,14 @@ function setInputNavButton(){
 	$("#inputBtn").click(function(){
 		scrollToTop();
 		$("#inputPanel").slideDown("slow");
+		$("#outputPanel").css("margin-top", "10px");
+		$("#volumeBody").css("margin-right", "-50px");
+		$("#volumeBody").css("padding-left", "5%");
+		$("#costumerBody").css("padding-left", "5%");
+		$("#costumerBody").css("margin-right", "-10px");
+		$("#volumeWrapper .btnWrapper #baseline").css("margin-top", "15px");
+		$("#volumeWrapper .btnWrapper #scenario").css("margin-top", "15px");
+		$("#volumeWrapper .btnWrapper #compare").css("margin-top", "15px");
 	});
 }
 
@@ -103,6 +112,16 @@ function setInputCloseButton(){
 
 	$("#inputCloseButton").click(function(){
 		$("#inputPanel").slideUp("slow");
+		
+		$("#outputPanel").css("margin-top", "60px");
+		$("#volumeBody").css("margin-right", "-60px");
+		$("#volumeBody").css("padding-left", "15%");
+		$("#costumerBody").css("padding-left", "15%");
+		$("#costumerBody").css("margin-right", "80px");
+		$("#volumeWrapper .btnWrapper #baseline").css("margin-top", "-15px");
+		$("#volumeWrapper .btnWrapper #scenario").css("margin-top", "-15px");
+		$("#volumeWrapper .btnWrapper #compare").css("margin-top", "-15px");
+
 	});
 }
 
