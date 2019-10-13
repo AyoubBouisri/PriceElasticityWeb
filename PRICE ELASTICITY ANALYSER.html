@@ -1,73 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Price Elasticity Analyser</title>
+<head>
+	<meta charset="utf-8">
+	<title>Price Elasticity Analyser</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="outputPanel.css">
-    <link rel="stylesheet" type="text/css" href="inputPanel.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="outputPanel.css">
+	<link rel="stylesheet" type="text/css" href="inputPanel.css">
 
-    <link id = "navBarStyle" rel="stylesheet" type="text/css" href="navBarStyleExpanded.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <script src="jquery.js"></script>
-    <script src="https://kit.fontawesome.com/e8be218b59.js" crossorigin="anonymous"></script>
+	<link id = "navBarStyle" rel="stylesheet" type="text/css" href="navBarStyleExpanded.css">
 
-    <script src="script.js"></script>
-  </head>
-  <body>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  	<div id = "navigationBar">
-  		<div id = "logoContainer">
-  			<img id = "logo" src ="logo.png" alt = "logo" height = "100" width = "100"></img>
+	<script src="jquery.js"></script>
+	<script src="https://kit.fontawesome.com/e8be218b59.js" crossorigin="anonymous"></script>
 
-  			<div id = "logoText">
-  				<span>PRICE ELASTICTY ANALYSER</span>
-  			</div>
-  		</div>
+	<script src="script.js"></script>
+</head>
+<body>
 
-  		<div id = "parametresWrapper">
-  			<div class = "designLine"></div>
-  			<div id = "parametresButton" class = "fas fa-angle-double-right"> </div>
-  			<div class = "designLine"></div>
-  		</div>
+	<div id = "navigationBar">
+		<div id = "logoContainer">
+			<img id = "logo" src ="logo.png" alt = "logo" height = "100" width = "100"></img>
 
-  		<div id = "buttonsWrapper">
-  			
-  			<div id = "homeBtn" class = "navigationButton">
-  				<i class = "fa fa-home" id = "icon"></i>
-  				HOME
-  			</div>
-  			<div id = "inputBtn" class = "navigationButton">
-  				<i class ="far fa-keyboard" id = "icon"></i>
-  				INPUTS
-  			</div>
-  			<div id = "outputBtn" class = "navigationButton"  >
-  				<i class = "fas fa-chart-pie" id = "icon"></i>
-  				OUTPUTS
-  			</div>
+			<div id = "logoText">
+				<span>PRICE ELASTICTY ANALYSER</span>
+			</div>
+		</div>
 
-  			<div id = "outputTypes">
-  				<div id = "graphBtn" class = "outputType">PRICE ELASTICTY GRAPH</div>
-  				<div class = "line"></div>
-  				<div id = "costumerBtn" class = "outputType">CONSUMER SEGMENTATION</div>
-  				<div class = "line"></div>
-  				<div id = "volumeBtn" class = "outputType">VOLUME ARPU REVENUE ACLV</div>
+		<div id = "parametresWrapper">
+			<div class = "designLine"></div>
+			<div id = "parametresButton" class = "fas fa-angle-double-right"> </div>
+			<div class = "designLine"></div>
+		</div>
+
+		<div id = "buttonsWrapper">
+
+			<div id = "homeBtn" class = "navigationButton">
+				<i class = "fa fa-home" id = "icon"></i>
+				HOME
+			</div>
+			<div id = "inputBtn" class = "navigationButton">
+				<i class ="far fa-keyboard" id = "icon"></i>
+				INPUTS
+			</div>
+			<div id = "outputBtn" class = "navigationButton"  >
+				<i class = "fas fa-chart-pie" id = "icon"></i>
+				OUTPUTS
+			</div>
+
+			<div id = "outputTypes">
+				<div id = "graphBtn" class = "outputType">PRICE ELASTICTY GRAPH</div>
+				<div class = "line"></div>
+				<div id = "costumerBtn" class = "outputType">CONSUMER SEGMENTATION</div>
+				<div class = "line"></div>
+				<div id = "volumeBtn" class = "outputType">VOLUME ARPU REVENUE ACLV</div>
 
 
-  			</div>
-  		</div>
+			</div>
+		</div>
 
-  	</div>
+	</div>
 
-  	<div id = "mainPanel">
-  		<div id = "inputPanel">
-  			<header>
-  				<div id = "inputTitle">INPUTS</div>
-  				<div id = "inputCloseButton" class = "fas fa-times"></div>
-  			</header>
+	<div id = "mainPanel">
+		<div id = "inputPanel">
+			<header>
+				<div id = "inputTitle">INPUTS</div>
+				<div id = "inputCloseButton" class = "fas fa-times"></div>
+			</header>
+
+			<div id = "inputBody">
+
+				<div id = "alpha" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">	ALPHA</div>
+
+					</div>
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>40%</option>
+							<option>30%</option>
+							<option>20%</option>
+							<option>10%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							WHAT TEST
+						</div>
+						<select>
+							<option>0</option>
+							
+						</select>
+					</div>
+
+					<div  class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>0 GB</option>							
+						</select>
+					</div>
+
+
+
+
+				</div>
+
+				<div id = "beta" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">BETA</div>
+
+
+					</div>
+					
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+
+				</div>
+
+				<div id = "gamma" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">GAMMA</div>
+
+					</div>
+					
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+				</div>
+
+				<div id = "epsilon" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">EPSILON</div>
+
+					</div>			
+					
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+				</div>
+
+				<div id = "mobile" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">MOBILE</div>
+
+					</div>	
+					
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+				</div>
+
+				<div id = "yota" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">YOTA</div>
+
+					</div>	
+					
+
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+				</div>
+
+				<div id = "theta" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">THETA</div>
+
+					</div>		
+
+
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+				</div>
+
+				<div id = "kappa" class = "companyInput">
+					<div class = "companyHeader">
+						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
+						<div class = "companyTitle">KAPPA</div>
+
+					</div>  	
+					
+
+					<div class = "priceShift">
+						<div class = "sousTitre1">
+							PRICE SHIFT
+						</div>
+						<select>
+							<option>0%</option>
+							<option>-10%</option>
+							<option>-20%</option>
+							<option>-30%</option>
+							<option>-40%</option>
+						</select>
+					</div>
+
+					<div class = "priceShift">
+						<div class = "sousTitre2">
+							UNLIMITED TARIFF
+						</div>
+						<select>
+							<option>not available</option>
+							
+						</select>
+					</div>
+
+
+				</div>
+
+			</div>
 
 		</div>
 
@@ -80,6 +368,7 @@
 			<div id = "costumerWrapper" style="display: none" >
 				<header> CUSTOMER SEGMENTATION</header>
 				<div id = "costumerBody"><img src="img/recontractConsumerSegment.png"></div>
+
 				<div class = "btnWrapper">
 					<div id = "recontract" class = "typeBtn">
 						<div class = "btnTitle">RECONTRACTED COSTUMERS</div>
@@ -122,11 +411,11 @@
 						<div class = "btnLine"></div>
 						<div class = "btnDescription"> Compare the data of the new and recontracted consumers <br>&nbsp;</div>
 					</div>
+				</div>
+
+
 			</div>
-
-
 		</div>
-  	</div>
 
-  </body>
-</html>
+	</body>
+	</html>
