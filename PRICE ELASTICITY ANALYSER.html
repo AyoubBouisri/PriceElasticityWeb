@@ -38,7 +38,7 @@
 		<div id = "buttonsWrapper">
 
 			<div id = "homeBtn" class = "navigationButton">
-				<i class = "fa fa-home" id = "icon"></i>
+				<i class = "fa fa-home" id = "icon" style="color:red"></i>
 				HOME
 			</div>
 			<div id = "inputBtn" class = "navigationButton">
@@ -55,7 +55,7 @@
 				<div class = "line"></div>
 				<div id = "costumerBtn" class = "outputType">CONSUMER SEGMENTATION</div>
 				<div class = "line"></div>
-				<div id = "volumeBtn" class = "outputType">VOLUME ARPU REVENUE ACLV</div>
+				<div id = "volumeBtn" class = "outputType">BASELINE VS SCENARIO</div>
 
 
 			</div>
@@ -82,7 +82,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>40%</option>
 							<option>30%</option>
@@ -99,7 +99,7 @@
 						<div class = "sousTitre1">
 							WHAT TEST
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0</option>
 							
 						</select>
@@ -109,7 +109,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0 GB</option>							
 						</select>
 					</div>
@@ -131,7 +131,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -165,7 +165,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -178,7 +178,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>not available</option>
 							
 						</select>
@@ -198,7 +198,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -211,7 +211,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>not available</option>
 							
 						</select>
@@ -231,7 +231,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -244,7 +244,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>not available</option>
 							
 						</select>
@@ -265,7 +265,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -278,7 +278,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>not available</option>
 							
 						</select>
@@ -299,7 +299,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -312,7 +312,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>not available</option>
 							
 						</select>
@@ -333,7 +333,7 @@
 						<div class = "sousTitre1">
 							PRICE SHIFT
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>0%</option>
 							<option>-10%</option>
 							<option>-20%</option>
@@ -346,7 +346,7 @@
 						<div class = "sousTitre2">
 							UNLIMITED TARIFF
 						</div>
-						<select>
+						<select onchange="changeInputs()">
 							<option>not available</option>
 							
 						</select>
@@ -362,12 +362,12 @@
 		<div id = "outputPanel">
 			<div id = "graphWrapper" style="display: none">
 				<header> PRICE ELASTICITY GRAPH</header>
-				<div id = "graph"><img src="img/graph.png" alt=""></div>
+				<div id = "graph"><img src="img/graph.png" alt="Price elastic graph" id="imgGraph"></div>
 			</div>
 
 			<div id = "costumerWrapper" style="display: none" >
 				<header> CUSTOMER SEGMENTATION</header>
-				<div id = "costumerBody"><img src="img/recontractConsumerSegment.png"></div>
+				<div id = "costumerBody"><img src="img/recontractConsumerSegment.png" alt="Customer segmentation" id="imgCS"></div>
 
 				<div class = "btnWrapper">
 					<div id = "recontract" class = "typeBtn">
@@ -392,7 +392,7 @@
 			</div>
 			<div id = "volumeWrapper" style = "display: none">
 				<header> BASELINE VS SCENARIO</header>
-				<div id = "volumeBody"><img src="img/newCustomerConsumerSegment.png"></div>
+				<div id = "volumeBody"><img src="img/newCustomerConsumerSegment.png" alt="Baseline VS Scenario" id="imgVL"></div>
 				<div class = "btnWrapper">
 					<div id = "baseline" class = "typeBtn">
 						<div id = "baselineTitle" class = "btnTitle">BASELINE</div>

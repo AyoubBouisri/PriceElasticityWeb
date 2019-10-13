@@ -62,19 +62,23 @@
 #costumerWrapper header{
 	
 	margin:5px;
-	font-size:15px;
+	font-size:17px;
 	margin-left:10px;
 	letter-spacing: 3px;
 	float:left;
+	width:100%;
 }
 
 #costumerBody{
 	float:left;
 	width: 70%;
+	height:auto;
 	margin-bottom: 6px;
 	margin-right: 80px;
 	padding-right: 1%;
 	padding-left:15%;
+
+
 }
 
 /* IMAGES */
@@ -166,10 +170,11 @@
 
 #volumeWrapper header{
 	margin:5px;
-	font-size:15px;
+	font-size:17px;
 	margin-left:10px;
 	letter-spacing: 3px;
 	float:left;
+	width:100%;
 }
 
 /* IMAGES */
@@ -182,9 +187,10 @@
 #volumeBody{
 	float:left;
 	width: 70%;
-	height:100%;
-	margin-bottom: 6px;
+	height:auto;
+	margin-bottom: 4.5%;
 	margin-right: -55px;
 	padding-right: 5%;
 	padding-left:15%;
+
 }
