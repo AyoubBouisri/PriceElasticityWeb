@@ -1,7 +1,6 @@
 #inputPanel{
 
 	background-color: white;
-
 	width:100%;
 	height:200px;
 	display:none;
@@ -43,7 +42,6 @@
 /* INPUT BODY */
 
 #inputBody{
-
 	position: relative;
 	width:100%;
 	height:85%;
@@ -76,7 +74,6 @@
 }
 
 .companyHeader{
-	background-color: gray;
 	float:left;
 	opacity: 0.5;
 	border-radius: 10px 0px 0px 10px;
@@ -142,5 +139,19 @@
 	letter-spacing: 1px;
 }
 
+/* @media screen and (max-width : 1280px)
+{
+  #companyInput{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, 100%);
+	grid-template-rows: repeat(auto-fit, 100%);
+  }
 
+  #inputPanel{
+	height:100%;
+	width:100%;
+	background-color:yellow;
+	float:left;
+  }
+} */
 

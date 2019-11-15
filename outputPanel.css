@@ -56,7 +56,6 @@
 	text-align: center;
 	width:100%;
 	height:100%;
-	
 }
 
 #costumerWrapper header{
@@ -77,7 +76,6 @@
 	margin-right: 80px;
 	padding-right: 1%;
 	padding-left:15%;
-
 }
 
 /* IMAGES */
@@ -90,8 +88,11 @@
 
 .btnWrapper{
 	position: relative;
+	float:left; /**/
 	height:auto;
-	padding-top: 2%;
+	padding-top: 1%;
+
+
 }
 
 .typeBtn{
@@ -100,24 +101,30 @@
 	background-color: white;
 	width:160px;
 	height:100%;
-
 	border-radius: 3px;
 	margin-right: 15px;
 	margin-top: 20px;
-
 	cursor:pointer;
-
-		color:#444444;
-
-
+	color:#444444;
 }
 
+/* Set hover effect in javascript */
+.hoverState, .focusState{
+	margin-top:10px;
+	border-style: solid;
+	border-width: 0px 0px 5px 0px;
+	border-color: red;
+}
+
+/*
 .typeBtn:hover{
 	margin-top:10px;
 	border-style: solid;
 	border-width: 0px 0px 5px 0px;
 	border-color: red;
 }
+*/
+
 .btnTitle{
 	text-align: left;
 	letter-spacing: 2px;
@@ -157,10 +164,6 @@
 	text-align: center;
 	width:100%;
 	height:100%;
-
-
-
-
 }
 
 #volumeWrapper header{
@@ -175,17 +178,40 @@
 /* IMAGES */
 #volumeBody img{
 	height: auto;
-	width: 70%;
+	width: 80%;
 	padding-top:10px;
 }
 
 #volumeBody{
 	float:left;
+	position:relative;/**/
 	width: 70%;
 	height:auto;
-	margin-bottom: 1.5%;
+	margin-bottom: 6px;/*1.5%*/
 	margin-right: -55px;
 	padding-right: 5%;
 	padding-left:15%;
-
 }
+
+/* @media screen and (max-width : 1280px)
+{
+
+	#volumeWrapper img{
+	
+		float:left;
+		width:100%;
+	}
+	
+	.btnWrapper
+	{
+		float:left;
+	}
+	.typeBtn{
+		
+	}
+	
+	#outputPanel{
+		float:left;
+	}
+} */
+
