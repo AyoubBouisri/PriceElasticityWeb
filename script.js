@@ -7,6 +7,9 @@ var lastFocusedVW;
 
 window.onload = initiate;
 
+
+
+
 function initiate(){
 
 	initiateNavigationBar();
@@ -165,34 +168,47 @@ function showDiv(showDiv,hideDiv1,hideDiv2){
 }
 
 
-
-
 function setInputPanel(){
 	setInputCloseButton();
 }
 
 function setInputNavButton(){
 	$("#inputBtn").click(function(){
-		if($("#inputBtn > #icon").css("color") == "rgb(255,0,0)"){
-			setInputCloseButton();
+		if(inputVisible){
+			$("#inputCloseButton").trigger("click");
 		}else{
 			inputVisible = true;
 		scrollToTop();
-		$("#inputPanel").slideDown("slow");
+
+		// Animation
+		function showInputBody(){
+			$("#inputBody").css("visibility","visible");
+		}
+
+		$("#inputBody").css("visibility","hidden");
+		$("#inputPanel").slideDown("slow", "swing", showInputBody);
+		
+
 		$("#inputBtn > #icon").css("color","red");
 
 		if(compressed){
 			$("#costumerBody").css("padding-right","10%");
 			$("#volumeBody").css("padding-right","10%");
-			$(".btnWrapper").css("width", "20%");
+			
 			
 		}else{
 			$("#costumerBody").css("padding-right","-20%");
 			$("#volumeBody").css("margin-right", "-50px");
-			$(".btnWrapper").css("width", "20%");
 			
 		}
-
+		if (window.matchMedia("(max-width: 1000px)").matches) {
+			/* The viewport is less than, or equal to, 1000 pixels wide */
+			$(".btnWrapper").css("width", "");
+		} else {
+			/* The viewport is greater than 1000 pixels wide */
+			$(".btnWrapper").css("width", "20%");
+		}
+		
 		$("#outputPanel").css("margin-top", "10px");
 		$("#volumeBody").css("padding-left", "5%");
 		$("#costumerBody").css("padding-left", "5%");
@@ -235,7 +251,13 @@ function setInputCloseButton(){
 
 	$("#inputCloseButton").click(function(){
 		inputVisible = false;
-		$("#inputPanel").slideUp("slow");
+
+		//Animation
+		function hideInputBody(){
+			$("#inputBody").css("visibility","visible");
+		}
+		$("#inputBody").css("visibility","hidden");
+		$("#inputPanel").slideUp("slow", "linear", hideInputBody);
 		$("#inputBtn > #icon").css("color","gray");
 		
 		if(compressed){
@@ -345,4 +367,25 @@ changeInputs = function () {
 	}
 	imgGraph.src = "img/graphMAJ.png";
   
+}
+
+// Responsive
+if (matchMedia) {
+	const screen = window.matchMedia("(min-width: 1000px)");
+	screen.addListener(WidthChange);
+	WidthChange(screen);
+}
+	
+function WidthChange(screen) {
+	if (screen.matches) {
+		// window width is at least 1000px
+		if(compressed && !inputVisible || !compressed && !inputVisible){
+			$(".btnWrapper").css("width", "");
+		}else{
+			$(".btnWrapper").css("width", "20px");
+		}
+	} else {
+		// window width is less than 1000px
+		$(".btnWrapper").css("width", "");
+	}
 }

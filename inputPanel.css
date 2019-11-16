@@ -139,8 +139,11 @@
 	letter-spacing: 1px;
 }
 
-/* @media screen and (max-width : 1280px)
+@media screen and (max-width : 1275px)
 {
+	.companyTitle{
+		font-size:1vw;
+	}
   #companyInput{
 	display:grid;
 	grid-template-columns: repeat(auto-fit, 100%);
@@ -150,8 +153,7 @@
   #inputPanel{
 	height:100%;
 	width:100%;
-	background-color:yellow;
 	float:left;
   }
-} */
+}
 

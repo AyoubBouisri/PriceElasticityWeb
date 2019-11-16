@@ -193,25 +193,29 @@
 	padding-left:15%;
 }
 
-/* @media screen and (max-width : 1280px)
+@media screen and (max-width : 1275px)
 {
-
+	#outputPanel{
+		float:left;
+		margin-top : 60px;
+		
+	}
+	#costumerBody{
+		width:100%;
+	}
+}
+@media screen and (max-width : 1000px)
+{
 	#volumeWrapper img{
-	
 		float:left;
 		width:100%;
 	}
-	
-	.btnWrapper
-	{
+	#consumerWrapper img{
 		float:left;
+		width:100%;
 	}
-	.typeBtn{
-		
-	}
-	
-	#outputPanel{
+	#graphWrapper img{
 		float:left;
+		width:100%;
 	}
-} */
-
+}
