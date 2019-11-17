@@ -1,438 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width" />
-	<title>Price Elasticity Analyser</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Price Elasticity Analyser</title>
 
-	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="outputPanel.css">
-	<link rel="stylesheet" type="text/css" href="inputPanel.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="outputPanel.css">
+    <link rel="stylesheet" type="text/css" href="inputPanel.css">
 
-	<link id = "navBarStyle" rel="stylesheet" type="text/css" href="navBarStyleExpanded.css">
+    <link id="navBarStyle" rel="stylesheet" type="text/css" href="navBarStyleExpanded.css">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<script src="jquery.js"></script>
-	<script src="https://kit.fontawesome.com/e8be218b59.js" crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+    <script src="https://kit.fontawesome.com/e8be218b59.js" crossorigin="anonymous"></script>
 
-	<script src="script.js"></script>
+    <script src="script.js"></script>
 </head>
 <header id="header"></header>
+
 <body>
-	<div id = "navigationBar">
-		<div id = "logoContainer">
-			<img id = "logo" src ="logo.png" alt = "logo" height = "100" width = "100"></img>
-
-			<div id = "logoText">
-				<span>PRICE ELASTICTY ANALYSER</span>
-			</div>
-		</div>
-
-		<div id = "parametresWrapper">
-			<div class = "designLine"></div>
-			<div id = "parametresButton" class = "fas fa-angle-double-right"> </div>
-			<div class = "designLine"></div>
-		</div>
-
-		<div id = "buttonsWrapper">
-
-			<div id = "homeBtn" class = "navigationButton">
-				<i class = "fa fa-home" id = "icon" style="color:red"></i>
-				HOME
-			</div>
-			<div id = "inputBtn" class = "navigationButton">
-				<i class ="far fa-keyboard" id = "icon"></i>
-				INPUTS
-			</div>
-			<div id = "outputBtn" class = "navigationButton"  >
-				<i class = "fas fa-chart-pie" id = "icon"></i>
-				OUTPUTS
-			</div>
-
-			<div id = "outputTypes">
-				<div id = "graphBtn" class = "outputType">PRICE ELASTICTY GRAPH</div>
-				<div class = "line"></div>
-				<div id = "costumerBtn" class = "outputType">CONSUMER SEGMENTATION</div>
-				<div class = "line"></div>
-				<div id = "volumeBtn" class = "outputType">BASELINE VS SCENARIO</div>
-
-
-			</div>
-		</div>
-
-	</div>
-
-	<div id = "mainPanel">
-		<div id = "inputPanel">
-			<header>
-				<div id = "inputTitle">INPUTS</div>
-				<div id = "inputCloseButton" class = "fas fa-times"></div>
-			</header>
-
-			<div id = "inputBody">
-
-				<div id = "alpha" class = "companyInput">
-					<div class = "companyHeader" style="background-color:darkred;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">	ALPHA</div>
-
-					</div>
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>40%</option>
-							<option>30%</option>
-							<option>20%</option>
-							<option>10%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							HIGH TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>none</option>
-							<option>100GB</option>
-							
-						</select>
-					</div>
-
-					<div  class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>							
-						</select>
-					</div>
-
-
-
-
-				</div>
-
-				<div id = "beta" class = "companyInput">
-					<div class = "companyHeader" style="background-color:orangered;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">BETA</div>
-
-
-					</div>
-					
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select>
-							<option>available at £5</option>
-							<option>available at £10</option>
-							
-						</select>
-					</div>
-
-
-
-				</div>
-
-				<div id = "gamma" class = "companyInput">
-					<div class = "companyHeader" style="background-color:orange;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">GAMMA</div>
-
-					</div>
-					
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>available at £5</option>
-							<option>available at £10</option>
-							
-						</select>
-					</div>
-
-
-				</div>
-
-				<div id = "epsilon" class = "companyInput">
-					<div class = "companyHeader" style="background-color:skyblue;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">EPSILON</div>
-
-					</div>			
-					
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>not available</option>
-							<option>available at £5</option>
-							<option>available at £10</option>
-							
-						</select>
-					</div>
-
-
-				</div>
-
-				<div id = "mobile" class = "companyInput">
-					<div class = "companyHeader" style="background-color: darkblue;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">MOBILE</div>
-
-					</div>	
-					
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>not available</option>
-							<option>available at £5</option>
-							<option>available at £10</option>
-							<option>available at £15</option>
-							
-						</select>
-					</div>
-
-
-				</div>
-
-				<div id = "yota" class = "companyInput">
-					<div class = "companyHeader" style="background-color:purple;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">YOTA</div>
-
-					</div>	
-					
-
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>not available</option>
-							<option>available at £5</option>
-							<option>available at £10</option>
-							<option>available at £15</option>
-							
-						</select>
-					</div>
-
-
-				</div>
-
-				<div id = "theta" class = "companyInput">
-					<div class = "companyHeader" style="background-color:magenta;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">THETA</div>
-
-					</div>		
-
-
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>not available</option>
-							
-						</select>
-					</div>
-
-
-				</div>
-
-				<div id = "kappa" class = "companyInput">
-					<div class = "companyHeader" style="background-color:black;">
-						<div id = "companyLogo"class = "fas fa-user-tie" ></div>
-						<div class = "companyTitle">KAPPA</div>
-
-					</div>  	
-					
-
-					<div class = "priceShift">
-						<div class = "sousTitre1">
-							PRICE SHIFT
-						</div>
-						<select onchange="changeInputs()">
-							<option>0%</option>
-							<option>-10%</option>
-							<option>-20%</option>
-							<option>-30%</option>
-							<option>-40%</option>
-						</select>
-					</div>
-
-					<div class = "priceShift">
-						<div class = "sousTitre2">
-							UNLIMITED TARIFF
-						</div>
-						<select onchange="changeInputs()">
-							<option>not available</option>
-							
-						</select>
-					</div>
-
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div id = "outputPanel">
-			<!-- <div id="homepage"></div> -->
-			<div id = "graphWrapper" style="display: none">
-				<header> PRICE ELASTICITY GRAPH</header>
-				<div id = "graph"><img src="img/graph.png" alt="Price elastic graph" id="imgGraph"></div>
-			</div>
-
-			<div id = "costumerWrapper" style="display: none" >
-				<header> CONSUMER SEGMENTATION</header>
-				<div id = "costumerBody"><img src="img/meta-chart.png" alt="Customer segmentation" id="imgCS"></div>
-
-				<div class = "btnWrapper">
-					<div id = "recontract" class = "typeBtn">
-						<div class = "btnTitle">RECONTRACTED CUSTOMERS</div>
-						<div class = "btnLine"></div>
-						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for returning costumers</div>
-					</div>
-
-					<div id = "new" class = "typeBtn" >
-						<div class = "btnTitle">NEW CUSTOMERS</div>
-						<div class = "btnLine"></div>
-						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for new costumers</div>
-					</div>
-
-					<div class = "typeBtn" id ="compareCW">
-						<div id = "compareTitle" class = "btnTitle">COMPARE</div>
-						<div class = "btnLine"></div>
-						<div class = "btnDescription"> Compare the data of the new and recontracted consumers<br>&nbsp;</div>
-					</div>
-					
-				</div>
-			</div>
-			<div id = "volumeWrapper" style = "display: none">
-				<header> BASELINE VS SCENARIO</header>
-				<div id = "volumeBody"><img src="img/meta-chart3.png" alt="Baseline VS Scenario" id="imgVL"></div>
-				<div class = "btnWrapper">
-					<div id = "baseline" class = "typeBtn">
-						<div id = "baselineTitle" class = "btnTitle">BASELINE</div>
-						<div class = "btnLine"></div>
-						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for returning costumers</div>
-					</div>
-
-					<div id = "scenario" class = "typeBtn">
-						<div id = "scenarioTitle" class = "btnTitle">SCENARIO</div>
-						<div class = "btnLine"></div>
-						<div class = "btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for new costumers</div>
-					</div>
-
-					<div class = "typeBtn" id ="compareVW">
-						<div id = "compareTitle" class = "btnTitle">COMPARE</div>
-						<div class = "btnLine"></div>
-						<div class = "btnDescription"> Compare the data of the new and recontracted consumers <br>&nbsp;</div>
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-	</div>
+    <div id="navigationBar">
+        <div id="logoContainer">
+            <img id="logo" src="logo.png" alt="logo" height="100" width="100"></img>
+
+            <div id="logoText">
+                <span>PRICE ELASTICTY ANALYSER</span>
+            </div>
+        </div>
+
+        <div id="parametresWrapper">
+            <div class="designLine"></div>
+            <div id="parametresButton" class="fas fa-angle-double-right"> </div>
+            <div class="designLine"></div>
+        </div>
+
+        <div id="buttonsWrapper">
+
+            <div id="homeBtn" class="navigationButton">
+                <i class="fa fa-home" id="icon" style="color:red"></i>
+                HOME
+            </div>
+            <div id="inputBtn" class="navigationButton">
+                <i class="far fa-keyboard" id="icon"></i>
+                INPUTS
+            </div>
+            <div id="outputBtn" class="navigationButton">
+                <i class="fas fa-chart-pie" id="icon"></i>
+                OUTPUTS
+            </div>
+
+            <div id="outputTypes">
+                <div id="graphBtn" class="outputType">PRICE ELASTICTY GRAPH</div>
+                <div class="line"></div>
+                <div id="costumerBtn" class="outputType">CONSUMER SEGMENTATION</div>
+                <div class="line"></div>
+                <div id="volumeBtn" class="outputType">BASELINE VS SCENARIO</div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mainPanel">
+        <div id="inputPanel">
+            <header>
+                <div id="inputTitle">INPUTS</div>
+                <div id="inputCloseButton" class="fas fa-times"></div>
+            </header>
+
+            <div id="inputBody">
+
+                <div id="alpha" class="companyInput">
+                    <div class="companyHeader" style="background-color:darkred;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle"> ALPHA</div>
+
+                    </div>
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>40%</option>
+                            <option>30%</option>
+                            <option>20%</option>
+                            <option>10%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            HIGH TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>none</option>
+                            <option>100GB</option>
+
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                        </select>
+                    </div>
+
+
+
+
+                </div>
+
+                <div id="beta" class="companyInput">
+                    <div class="companyHeader" style="background-color:orangered;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">BETA</div>
+
+
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select>
+                            <option>available at £5</option>
+                            <option>available at £10</option>
+
+                        </select>
+                    </div>
+
+
+
+                </div>
+
+                <div id="gamma" class="companyInput">
+                    <div class="companyHeader" style="background-color:orange;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">GAMMA</div>
+
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>available at £5</option>
+                            <option>available at £10</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div id="epsilon" class="companyInput">
+                    <div class="companyHeader" style="background-color:skyblue;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">EPSILON</div>
+
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>not available</option>
+                            <option>available at £5</option>
+                            <option>available at £10</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div id="mobile" class="companyInput">
+                    <div class="companyHeader" style="background-color: darkblue;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">MOBILE</div>
+
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>not available</option>
+                            <option>available at £5</option>
+                            <option>available at £10</option>
+                            <option>available at £15</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div id="yota" class="companyInput">
+                    <div class="companyHeader" style="background-color:purple;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">YOTA</div>
+
+                    </div>
+
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>not available</option>
+                            <option>available at £5</option>
+                            <option>available at £10</option>
+                            <option>available at £15</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div id="theta" class="companyInput">
+                    <div class="companyHeader" style="background-color:magenta;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">THETA</div>
+
+                    </div>
+
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>not available</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div id="kappa" class="companyInput">
+                    <div class="companyHeader" style="background-color:black;">
+                        <div id="companyLogo" class="fas fa-user-tie"></div>
+                        <div class="companyTitle">KAPPA</div>
+
+                    </div>
+
+
+                    <div class="priceShift">
+                        <div class="sousTitre1">
+                            PRICE SHIFT
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>0%</option>
+                            <option>-10%</option>
+                            <option>-20%</option>
+                            <option>-30%</option>
+                            <option>-40%</option>
+                        </select>
+                    </div>
+
+                    <div class="priceShift">
+                        <div class="sousTitre2">
+                            UNLIMITED TARIFF
+                        </div>
+                        <select onchange="changeInputs()">
+                            <option>not available</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="outputPanel">
+            <!-- <div id="homepage"></div> -->
+            <div id="graphWrapper" style="display: none">
+                <header> PRICE ELASTICITY GRAPH</header>
+                <div id="graph"><img src="img/graph.png" alt="Price elastic graph" id="imgGraph"></div>
+            </div>
+
+            <div id="costumerWrapper" style="display: none">
+                <header> CONSUMER SEGMENTATION</header>
+                <div id="costumerBody"><img src="img/meta-chart.png" alt="Customer segmentation" id="imgCS"></div>
+
+                <div class="btnWrapper">
+                    <div id="recontract" class="typeBtn">
+                        <div class="btnTitle">RECONTRACTED CUSTOMERS</div>
+                        <div class="btnLine"></div>
+                        <div class="btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for returning costumers</div>
+                    </div>
+
+                    <div id="new" class="typeBtn">
+                        <div class="btnTitle">NEW CUSTOMERS</div>
+                        <div class="btnLine"></div>
+                        <div class="btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for new costumers</div>
+                    </div>
+
+                    <div class="typeBtn" id="compareCW">
+                        <div id="compareTitle" class="btnTitle">COMPARE</div>
+                        <div class="btnLine"></div>
+                        <div class="btnDescription"> Compare the data of the new and recontracted consumers<br>&nbsp;</div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="volumeWrapper" style="display: none">
+                <header> BASELINE VS SCENARIO</header>
+                <div id="volumeBody"><img src="img/meta-chart3.png" alt="Baseline VS Scenario" id="imgVL"></div>
+                <div class="btnWrapper">
+                    <div id="baseline" class="typeBtn">
+                        <div id="baselineTitle" class="btnTitle">BASELINE</div>
+                        <div class="btnLine"></div>
+                        <div class="btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for returning costumers</div>
+                    </div>
+
+                    <div id="scenario" class="typeBtn">
+                        <div id="scenarioTitle" class="btnTitle">SCENARIO</div>
+                        <div class="btnLine"></div>
+                        <div class="btnDescription">Data containing the comparison of Baseline Vs Scenario according to the Volume and ARPU for new costumers</div>
+                    </div>
+
+                    <div class="typeBtn" id="compareVW">
+                        <div id="compareTitle" class="btnTitle">COMPARE</div>
+                        <div class="btnLine"></div>
+                        <div class="btnDescription"> Compare the data of the new and recontracted consumers <br>&nbsp;</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
 </body>
 <footer>
+    <!-- bouton d'aide -->
+    <button id="helpButton">
+        <img src="img/help-icon.jpg" height="50px" width="50px">
+    </button>
+
+    <div id="myWin" class="win">
+
+        <!-- contenu de la fenetre popup -->
+        <div class="win-content">
+            <span class="close">&times;</span>
+            <p>HELP WINDOW</p>
+            <!-- jk :) -->
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">CLICK FOR HELP</a>
+        </div>
+    </div>
 
 </footer>
+
 </html>

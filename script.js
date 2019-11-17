@@ -15,6 +15,8 @@ function initiate(){
 	initiateNavigationBar();
 
 	setInputPanel();
+    
+    helpButton();
 }
 
 
@@ -416,4 +418,18 @@ function SmallWidthChange(phoneScreen) {
 			
 		}
 	}
+}
+
+// Boutton aide
+function helpButton(){
+    
+    //ouvre la fenetre d'aide lorsqu'on clique sur l'icone d'aide
+    $("#helpButton").click(function(){
+        $("#myWin").css("display", "block");
+    });
+    
+    //ferme la fenetre d'aide lorsqu'on clicque sur le X
+    $(".close").click(function(){
+        $("#myWin").css("display", "none");
+    });
 }
