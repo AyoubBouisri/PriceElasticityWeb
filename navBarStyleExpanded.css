@@ -139,7 +139,7 @@
 	width:calc(100% - 250px - 60px);
 }
 
-@media screen and (max-width : 1090px)
+@media screen and (max-width : 1280px)
 {
 	/*Temporary fix for outputType*/
 	#navigationBar{
@@ -158,7 +158,6 @@
 	}
 	#navigationBar{
 		clear:left;
-		/* float:left; */
 		margin-left:0;
 		width:100%;
 		height:auto;
@@ -169,15 +168,14 @@
 	}
 	#logoContainer{
 		width:100%;
-		/* float:left; */
 	}
 	#logo{
 		clear:left;
 		padding-left:35%;
 	}
 	#buttonsWrapper{
-		/* float:left; */
 		height:auto;
+	
 	}
 	
 	#homeBtn.navigationButton, #inputBtn.navigationButton, #outputBtn.navigationButton{
@@ -187,7 +185,7 @@
 		padding-left:5%;
 		width:100%;
 		display:none;
-		/* float:left; */
 		height:auto;
 	}
+	
 }
