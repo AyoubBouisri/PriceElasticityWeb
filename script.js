@@ -266,7 +266,17 @@ function setInputCloseButton(){
 			$("#volumeBody").css("margin-right", "-60px");
 		}
 
-		$("#outputPanel").css("margin-top", "60px");
+
+		if (window.matchMedia("(max-width: 790px)").matches) {
+			/* The viewport is less than, or equal to, 1000 pixels wide */
+			$("#outputPanel").css("margin-top", "10px");
+		} else {
+			/* The viewport is greater than 1000 pixels wide */
+			$("#outputPanel").css("margin-top", "60px");
+		}
+
+
+		// $("#outputPanel").css("margin-top", "60px");
 		$("#volumeBody").css("padding-left", "15%");
 		$("#costumerBody").css("padding-left", "15%");
 		$("#costumerBody").css("margin-right", "80px");
@@ -374,6 +384,11 @@ if (matchMedia) {
 	const screen = window.matchMedia("(min-width: 1000px)");
 	screen.addListener(WidthChange);
 	WidthChange(screen);
+
+	const phoneScreen = window.matchMedia("(min-width: 790px)");
+	phoneScreen.addListener(SmallWidthChange);
+	SmallWidthChange(phoneScreen);
+
 }
 	
 function WidthChange(screen) {
@@ -387,5 +402,18 @@ function WidthChange(screen) {
 	} else {
 		// window width is less than 1000px
 		$(".btnWrapper").css("width", "");
+	}
+}
+
+function SmallWidthChange(phoneScreen) {
+	if(compressed){
+		if (phoneScreen.matches) {
+			// window width is at least 790px
+			swapNavigationStyleSheet("navBarStyleCompressed.css");
+		} else {
+			// window width is less than 790px
+			setExpandedSheet();
+			
+		}
 	}
 }

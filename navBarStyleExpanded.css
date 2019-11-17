@@ -7,6 +7,10 @@
 	top : 0px;
 	left : 0px;
 
+
+	float:left;
+	margin-left:auto;
+
 }
 
 #logoContainer{
@@ -133,4 +137,57 @@
 #mainPanel{
 	left:250px;
 	width:calc(100% - 250px - 60px);
+}
+
+@media screen and (max-width : 1090px)
+{
+	/*Temporary fix for outputType*/
+	#navigationBar{
+		overflow:auto;
+		overflow-x:hidden;
+	}
+}
+
+
+@media screen and (max-width : 855px)
+{
+	#mainPanel{
+		height:auto;
+		width:100%;
+		left:0;
+	}
+	#navigationBar{
+		clear:left;
+		/* float:left; */
+		margin-left:0;
+		width:100%;
+		height:auto;
+	}
+
+	#parametresWrapper{
+		display:none;
+	}
+	#logoContainer{
+		width:100%;
+		/* float:left; */
+	}
+	#logo{
+		clear:left;
+		padding-left:35%;
+	}
+	#buttonsWrapper{
+		/* float:left; */
+		height:auto;
+	}
+	
+	#homeBtn.navigationButton, #inputBtn.navigationButton, #outputBtn.navigationButton{
+		padding-left:45%;
+	}
+	#outputTypes{
+		padding-left:5%;
+		width:100%;
+		display:none;
+		/* float:left; */
+		height:auto;
+	}
 }

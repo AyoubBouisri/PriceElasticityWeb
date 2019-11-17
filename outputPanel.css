@@ -198,14 +198,27 @@
 	#outputPanel{
 		float:left;
 		margin-top : 60px;
+		margin-bottom:10px;
 		
 	}
 	#costumerBody{
 		width:100%;
 	}
+	#volumeBody{
+		width:100%;
+	}
+	#graphBody{
+		width:100%;
+	}
+	
+	/* .btnWrapper{
+		background-color:yellow;
+	} */
 }
+
 @media screen and (max-width : 1000px)
 {
+	
 	#volumeWrapper img{
 		float:left;
 		width:100%;
@@ -218,4 +231,25 @@
 		float:left;
 		width:100%;
 	}
+}
+
+@media screen and (max-width : 855px)
+{
+	#outputPanel{
+  		clear: left;
+		height:100%;
+		width:100%;
+
+		margin-top:10px;
+		/* background-color:pink; */
+	}
+
+	.btnWrapper{
+		/* width:100%; */
+		clear:left;
+		height:auto;
+		/* background-color:yellow; */
+	}
+
+	
 }
