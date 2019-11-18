@@ -269,7 +269,7 @@ function setInputCloseButton(){
 		}
 
 
-		if (window.matchMedia("(max-width: 790px)").matches) {
+		if (window.matchMedia("(max-width: 855px)").matches) {
 			/* The viewport is less than, or equal to, 1000 pixels wide */
 			$("#outputPanel").css("margin-top", "10px");
 		} else {
@@ -387,7 +387,7 @@ if (matchMedia) {
 	screen.addListener(WidthChange);
 	WidthChange(screen);
 
-	const phoneScreen = window.matchMedia("(min-width: 790px)");
+	const phoneScreen = window.matchMedia("(min-width: 855px)");
 	phoneScreen.addListener(SmallWidthChange);
 	SmallWidthChange(phoneScreen);
 
@@ -408,13 +408,21 @@ function WidthChange(screen) {
 }
 
 function SmallWidthChange(phoneScreen) {
+	if(!compressed){
+		if(phoneScreen.matchMedia){
+				$("#outputPanel").css("margin-top", "10px");
+		}
+	}
 	if(compressed){
 		if (phoneScreen.matches) {
-			// window width is at least 790px
+			// window width is at least 855px
 			swapNavigationStyleSheet("navBarStyleCompressed.css");
 		} else {
-			// window width is less than 790px
+			// window width is less than 855px
 			setExpandedSheet();
+			if(!inputVisible){
+				$("#outputPanel").css("margin-top","10px");
+			}
 			
 		}
 	}
